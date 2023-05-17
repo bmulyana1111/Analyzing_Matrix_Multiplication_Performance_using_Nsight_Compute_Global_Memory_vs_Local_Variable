@@ -1,7 +1,6 @@
 # Analyzing Matrix Multiplication Performance using Nsight Compute: Global Memory vs. Local Variable
 
-Introduction:
-Matrix multiplication is a fundamental operation in many scientific and computational applications. In CUDA programming, efficient memory management plays a crucial role in achieving high-performance matrix multiplication. In this article, we will analyze and compare the performance of matrix multiplication using global memory and local variables by leveraging NVIDIA's Nsight Compute profiling tool. Nsight Compute provides valuable insights into the memory access patterns, occupancy, and performance of CUDA kernels, allowing us to optimize our code for better performance.
+Introduction: Matrix multiplication is a fundamental operation in many scientific and computational applications. In CUDA programming, efficient memory management plays a crucial role in achieving high-performance matrix multiplication. In this article, we will analyze and compare the performance of matrix multiplication using global memory and local variables by leveraging NVIDIA's Nsight Compute profiling tool. Nsight Compute provides valuable insights into the memory access patterns, occupancy, and performance of CUDA kernels, allowing us to optimize our code for better performance.
 
 1. Matrix Multiplication using Global Memory:
 When matrix multiplication is performed using global memory, each thread loads data from global memory into its registers and performs the computation. However, accessing global memory can be relatively slow due to its higher latency and limited bandwidth compared to on-chip memory.
