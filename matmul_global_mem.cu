@@ -25,7 +25,7 @@ __global__ void matrixMultiply(float *A, float *B, float *C, int size) {
     if( row < size && col < size ){
     // do the multiplication for one row and col using global memory
     for(int k = 0; k < size; k++){
-      //sum += A[row * size + k] * B[k * size + col];
+      //accessing global memory in many times (equal to the size of matrix)
       C[row * size + col] += A[row * size + k] * B[k * size + col];
     }
 
